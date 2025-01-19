@@ -87,7 +87,11 @@ a[disabled] {
 
 .author-block {
   display: inline-block;
+  margin: 0 0.5em;
 }
+
+/* .affiliation-block{
+} */
 
 .publication-banner img {
 }
