@@ -1,6 +1,6 @@
 body {
   /* font-family: 'Noto Sans', sans-serif; */
-  font-family: "IBM Plex Sans JP", sans-serif;
+  font-family: "IBM Plex Sans JP", "IBM Plex Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -15,6 +15,11 @@ a[disabled] {
     color: #000;
 }
 
+.footer{
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -24,6 +29,10 @@ a[disabled] {
   font-variant: small-caps;
 }
 
+.monospace {
+  font-family: monospace;
+  font-weight: 400;
+}
 
 .teaser .hero-body {
   padding-top: 0;
@@ -32,10 +41,6 @@ a[disabled] {
 
 .teaser {
   font-family: 'Google Sans', sans-serif;
-}
-
-
-.publication-title {
 }
 
 .publication-banner {
@@ -51,11 +56,12 @@ a[disabled] {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
+.title{
+  word-break: keep-all;
 }
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+    font-family: "IBM Plex Sans JP", 'Google Sans', sans-serif;
 }
 
 .publication-authors {
@@ -87,7 +93,7 @@ a[disabled] {
 
 .author-block {
   display: inline-block;
-  margin: 0 0.5em;
+  margin: 0 0.25em;
 }
 
 /* .affiliation-block{
@@ -165,4 +171,12 @@ a[disabled] {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .hero-body{
+    padding-top: 24px;
+    /* background-color: aqua; */
+  }
 }
