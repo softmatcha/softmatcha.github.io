@@ -32,16 +32,16 @@
     rel="stylesheet">
 
 
-  <link rel="stylesheet" href="../static/css/bulma.min.css">
-  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="/static/css/bulma.min.css">
+  <link rel="stylesheet" href="/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="../static/css/index.css">
-  <link rel="icon" href="../static/images/favicon.png">
+  <link rel="stylesheet" href="/static/css/index.css">
+  <link rel="icon" href="/static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="../static/js/index.js"></script>
+  <script src="/static/js/index.js"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -61,16 +61,21 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <!-- Home -->
+        <a class="navbar-item" href="/">
+          <img src="/static/images/banner.svg" alt="SoftMatcha" width="112" height="28">
+        </a>
 
+        <!-- Language -->
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             言語
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="../index.html">
+            <a class="navbar-item" href="../">
               English
             </a>
-            <a class="navbar-item" href="../ja/index.html">
+            <a class="navbar-item" href="./">
               日本語
             </a>
           </div>
@@ -166,41 +171,44 @@
                   </a>
               </span> -->
                   <!-- Dataset Link. -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/softmatcha" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fa-solid fa-laptop"></i>
-                    </span>
-                    <span>Demo</span>
-                  </a>
-                </span>&nbsp;
-                <span class="link-block">
-                  <a href="https://github.com/softmatcha/softmatcha" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fa-brands fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>&nbsp;
-                <span class="link-block">
-                  <a href="https://openreview.net/forum?id=Q6PAnqYVpo" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <img src="https://openreview.net/images/openreview_logo_512.png" style="height: 1.2em;"/>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>&nbsp;
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2503.03703" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <img src="https://github.com/arXiv/arxiv-docs/blob/0469f759c9e3fd2c71dd8057b1445eed72100f41/source/assets/favicon.png?raw=true" style="height: 1.2em;"/>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/softmatcha" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa-solid fa-laptop"></i>
+                      </span>
+                      <span>Demo</span>
+                    </a>
+                  </span>&nbsp;
+                  <span class="link-block">
+                    <a href="https://github.com/softmatcha/softmatcha" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa-brands fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>&nbsp;
+                  <span class="link-block">
+                    <a href="https://openreview.net/forum?id=Q6PAnqYVpo" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <img src="https://openreview.net/images/openreview_logo_512.png" style="height: 1.2em;" />
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>&nbsp;
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2503.03703" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <img
+                          src="https://github.com/arXiv/arxiv-docs/blob/0469f759c9e3fd2c71dd8057b1445eed72100f41/source/assets/favicon.png?raw=true"
+                          style="height: 1.2em;" />
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
                 </div>
 
               </div>
@@ -213,7 +221,7 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body has has-text-centered">
-        <image src="../static/images/logo.svg" width="100%" />
+        <image src="/static/images/logo.svg" width="100%" />
       </div>
     </div>
   </section>

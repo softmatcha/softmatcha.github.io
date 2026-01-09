@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="SoftMatcha">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SoftMatcha</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/static/css/bulma.min.css">
+  <link rel="stylesheet" href="/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="/static/css/index.css">
+  <link rel="icon" href="/static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/static/js/index.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="/">
+          <img src="/static/images/banner.svg" alt="SoftMatcha" width="112" height="28">
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            言語
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="./">
+              日本語
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered is-four-fifths">
+            <h2 class="title is-2 publication-title">SoftMatcha-2:<br>
+              一兆語規模の<wbr>コーパス<wbr>に対する<wbr>柔らかく<wbr>超高速な<wbr>検索システム</h3>
+              <div class="is-size-5 publication-authors">
+                <p>
+                  <span class="author-block">
+                    <a href="https://sites.google.com/view/e869120-webpage/home"
+                      target="_blank">米田優峻</a><sup>1,2</sup></span>
+                  <span class="author-block">
+                    <a href="https://gokamoda.github.io/" target="_blank">鴨田豪</a><sup>3,4</sup></span>
+                  <span class="author-block">
+                    <a href="https://shiatsumat.github.io/" target="_blank">松下祐介</a><sup>5</sup></span>
+                  <span class="author-block">
+                    <a href="https://ksuenaga.github.io/index_ja.html" target="_blank">末永幸平</a><sup>2,5</sup>
+                  </span>
+                  <br>
+                  <span class="author-block">
+                    <a href="https://takiba.net/" target="_blank">秋葉拓哉</a><sup>6,7</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://www.fos.kuis.kyoto-u.ac.jp/~mwaga/" target="_blank">和賀正樹</a><sup>2,5</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="http://www.cl.ecei.tohoku.ac.jp/~yokoi/" target="_blank">横井祥</a><sup>4,7,8</sup>
+                  </span>
+                </p>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block affiliation-block"><sup>1</sup>東京大学</span>
+                <span class="author-block affiliation-block"><sup>2</sup>国立情報学研究所</span>
+                <span class="author-block affiliation-block"><sup>3</sup>総合研究大学院大学</span>
+                <span class="author-block affiliation-block"><sup>4</sup>国立国語研究所</span>
+                <span class="author-block affiliation-block"><sup>5</sup>京都大学</span>
+                <span class="author-block affiliation-block"><sup>6</sup>Sakana AI 株式会社</span>
+                <span class="author-block affiliation-block"><sup>7</sup>東北大学</span>
+                <span class="author-block affiliation-block"><sup>8</sup>理化学研究所</span>
+              </div>
+
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a href="http://18.180.12.101/" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa-solid fa-laptop"></i>
+                      </span>
+                      <span>Demo</span>
+                    </a>
+                  </span>
+                </div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body has has-text-centered">
+        <image src="/static/images/v2.png" width="100%" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              超大規模コーパスをソフトにかつ超高速に検索できるアルゴリズムとシステムを提案・提供する．
+              提案法は，言語モデルの事前学習コーパスを検索する既存法の特徴，つまりクエリの語順の保持，
+              意味的類似性に基づいたソフトな置換，
+              1兆語規模コーパスに対する0.1秒単位の即時検索をすべて満たし，さらにクエリへの単語の挿入や削除も考慮できる．
+              特に，クエリに「似た」パターンの種類数の組合せ爆発という困難を，単語パターンの段階的な列挙と，
+              逐次的検索による枝刈りという新しいアルゴリズムで対処する．
+              1.4兆語のコーパスFineWeb-Eduを用いた実験では，完全一致の場合もソフトマッチの場合も，既存手法群（Infini-gram,
+              SoftMatcha）に対する大幅な高速化を確認した．
+              さらに，
+              FineWeb-Edu（抜粋）およびLLM-jp-corpus-v3（抜粋）をウェブブラウザ上で高速検索可能なオンラインツールを提供する．
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{
+  yoneda-nlp-2026-softmatcha,
+  title={SoftMatcha-2: 一兆語規模のコーパスに対する柔らかく超高速な検索システム},
+  author={米田優峻 and 松下祐介 and 鴨田豪 and 末永幸平 and 秋葉拓哉 and 和賀正樹 and 横井祥},
+  booktitle={第32回自然言語処理学会年次大会},
+  year={2026},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project
+              page.<br>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
