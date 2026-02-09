@@ -1,215 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="SoftMatcha">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
   <title>SoftMatcha</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
-
-
-  <link rel="stylesheet" href="/static/css/bulma.min.css">
-  <link rel="stylesheet" href="/static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="/static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="/static/css/index.css">
   <link rel="icon" href="/static/images/favicon.png">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/static/js/index.js"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/static/css/full-custom.css">
 </head>
 
-
-
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="/">
-          <img src="/static/images/banner.svg" alt="SoftMatcha" width="112" height="28">
-        </a>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            <i class="fa-solid fa-globe"></i>
+  <nav class="navbar navbar-expand navbar-light border-bottom py-1 py-md-2" style="background-color:#B6C072;">
+    <div class="container">
+      <div class="row justify-content-center w-100">
+        <div class="col-lg-9 d-flex align-items-center">
+
+          <!-- Brand -->
+          <a class="navbar-brand py-0 me-auto" href="/">
+            <img src="/static/images/banner.svg" alt="SoftMatcha" class="brand-logo d-inline-block align-middle">
           </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="../">
-              English
+
+          <!-- Language switch -->
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle py-0" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-globe"></i>
             </a>
-            <a class="navbar-item" href="./">
-              日本語
-            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="../">English</a></li>
+              <li><a class="dropdown-item" href="./">日本語</a></li>
+            </ul>
           </div>
+
         </div>
       </div>
-
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered is-four-fifths">
-            <h2 class="title is-2 publication-title">SoftMatcha 2:<br>
-              一兆語規模の<wbr>コーパス<wbr>に対する<wbr>柔らかく<wbr>超高速な<wbr>検索システム</h3>
-              <div class="is-size-5 publication-authors">
-                <p>
-                  <span class="author-block">
-                    <a href="https://sites.google.com/view/e869120-webpage/home"
-                      target="_blank">米田優峻</a><sup>1,2</sup></span>
-                  <span class="author-block">
-                    <a href="https://gokamoda.github.io/" target="_blank">鴨田豪</a><sup>3,4</sup></span>
-                  <span class="author-block">
-                    <a href="https://shiatsumat.github.io/" target="_blank">松下祐介</a><sup>5</sup></span>
-                  <span class="author-block">
-                    <a href="https://ksuenaga.github.io/index_ja.html" target="_blank">末永幸平</a><sup>2,5</sup>
-                  </span>
-                  <br>
-                  <span class="author-block">
-                    <a href="https://takiba.net/" target="_blank">秋葉拓哉</a><sup>6,7</sup>
-                  </span>
-                  <span class="author-block">
-                    <a href="https://www.fos.kuis.kyoto-u.ac.jp/~mwaga/" target="_blank">和賀正樹</a><sup>2,5</sup>
-                  </span>
-                  <span class="author-block">
-                    <a href="http://www.cl.ecei.tohoku.ac.jp/~yokoi/" target="_blank">横井祥</a><sup>4,7,8</sup>
-                  </span>
-                </p>
-              </div>
-
-              <div class="is-size-5 publication-authors">
-                <span class="author-block affiliation-block"><sup>1</sup>東京大学</span>
-                <span class="author-block affiliation-block"><sup>2</sup>国立情報学研究所</span>
-                <span class="author-block affiliation-block"><sup>3</sup>総合研究大学院大学</span>
-                <span class="author-block affiliation-block"><sup>4</sup>国立国語研究所</span>
-                <span class="author-block affiliation-block"><sup>5</sup>京都大学</span>
-                <span class="author-block affiliation-block"><sup>6</sup>Sakana AI 株式会社</span>
-                <span class="author-block affiliation-block"><sup>7</sup>東北大学</span>
-                <span class="author-block affiliation-block"><sup>8</sup>理化学研究所</span>
-              </div>
-
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- Dataset Link. -->
-                  <span class="link-block">
-                    <a href="http://softmatcha-2.s3-website-ap-northeast-1.amazonaws.com/" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fa-solid fa-laptop"></i>
-                      </span>
-                      <span>Demo</span>
-                    </a>
-                  </span>
-                </div>
-
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body has has-text-centered">
-        <image src="/static/images/v2.png" width="100%" />
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              超大規模コーパスを，超高速に，かつ意味や表記の揺れに柔らかく対応できる検索システムSoftMatcha 2を提案・提供する．
-              提案法は，言語モデルの学習コーパスの検索を目指す既存法の持つ特徴群，つまり，クエリの語順の保持，意味的類似性に基づいた置換，1兆語規模コーパスに対する0.1秒単位の即時検索のすべてを満たし，さらにクエリへの単語の挿入や削除も考慮できる．
-              特に，クエリに「似た」パターンの種類数の組合せ爆発という困難を，
-              逐次的検索による枝刈りをおこなう新しいアルゴリズムで解決する．
-              1.4兆語のコーパスFineWeb-Eduを用いた実験では，完全一致の場合も柔らかい検索の場合も，既存手法群（infini-gram,
-              SoftMatcha）と比べた大幅な高速化を確認した．
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{
-  yoneda-nlp-2026-softmatcha,
-  title={SoftMatcha-2: 一兆語規模のコーパスに対する柔らかく超高速な検索システム},
-  author={米田優峻 and 鴨田豪 and 松下祐介 and 末永幸平 and 秋葉拓哉 and 和賀正樹 and 横井祥},
-  booktitle={第32回自然言語処理学会年次大会},
-  year={2026},
-}</code></pre>
-    </div>
-  </section>
-
-
-  <footer class="footer">
+  <!-- Hero -->
+  <section class="mt-3 text-center">
     <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This page was built using the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project
-              page.<br>
-              This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-          </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h4 class="fw-bold lh-sm mb-0 text-nowrap">
+            SoftMatcha&nbsp;2:<wbr>
+            <br class="d-none d-md-block d-xxl-none">
+            一兆語<wbr>規模の<wbr>コーパス<wbr>に<wbr>対する<wbr><br class="d-none d-sm-block d-md-none">柔らかく<wbr>超高速な<wbr>検索<wbr>システム
+          </h4>
+          <!-- <hr class="mb-2 mt-1"> -->
+
+          <!-- Authors -->
+          <p class="mt-2 d-flex flex-wrap justify-content-center column-gap-2 row-gap-0 small lh-sm fw-light mb-0">
+            <span>
+              <a class="link-primary text-nowrap text-decoration-none"
+                href="https://sites.google.com/view/e869120-webpage/home" target="_blank">
+                米田優峻</a><sup>1,2</sup>
+            </span>
+            <span><a class="link-primary text-nowrap text-decoration-none" href="https://shiatsumat.github.io/"
+                target="_blank">
+                松下祐介</a><sup>3</sup></span>
+            <span><a class="link-primary text-nowrap text-decoration-none" href="https://gokamoda.github.io/"
+                target="_blank">
+                鴨田豪</a><sup>4,5</sup></span>
+            <span><a class="link-primary text-nowrap text-decoration-none"
+                href="https://ksuenaga.github.io/index_ja.html" target="_blank">
+                末永幸平</a><sup>2,3</sup></span>
+            <span><a class="link-primary text-nowrap text-decoration-none" href="https://takiba.net/" target="_blank">
+                秋葉拓哉</a><sup>6,7</sup></span>
+            <span><a class="link-primary text-nowrap text-decoration-none"
+                href="https://www.fos.kuis.kyoto-u.ac.jp/~mwaga/" target="_blank">
+                和賀正樹</a><sup>2,3</sup></span>
+            <span><a class="link-primary text-nowrap text-decoration-none"
+                href="http://www.cl.ecei.tohoku.ac.jp/~yokoi/" target="_blank">
+                横井祥</a><sup>5,7,8</sup></span>
+          </p>
+
+          <!-- Affiliations -->
+          <p
+            class="d-flex flex-wrap justify-content-center column-gap-3 row-gap-0 text-secondary small lh-sm fw-light mt-1">
+            <span class="text-nowrap"><sup>1</sup>東京大学</span>
+            <span class="text-nowrap"><sup>2</sup>国立情報学研究所</span>
+            <span class="text-nowrap"><sup>3</sup>京都大学</span>
+            <span class="text-nowrap"><sup>4</sup>総合研究大学院大学</span>
+            <span class="text-nowrap"><sup>5</sup>国立国語研究所</span>
+            <span class="text-nowrap"><sup>6</sup>Sakana AI</span>
+            <span class="text-nowrap"><sup>7</sup>東北大学</span>
+            <span class="text-nowrap"><sup>8</sup>理化学研究所</span>
+          </p>
+
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- TL;DR + Links + Image -->
+  <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+          <!-- Links -->
+          <div class="d-flex flex-wrap justify-content-center
+            column-gap-3 row-gap-2 mx-2">
+            <a href="http://softmatcha-2.s3-website-ap-northeast-1.amazonaws.com/"
+              class="btn btn-dark btn-sm rounded-pill px-3" target="_blank">
+              <span class="icon">
+                <i class="fa-solid fa-laptop"></i>
+              </span> &nbsp;
+              Demo
+            </a>
+            <!-- <a href="paper" class="btn btn-dark btn-sm rounded-pill px-3" target="_blank">
+              Paper
+            </a> -->
+          </div>
+
+          <!-- TL;DR -->
+          <div class="mt-2 p-3 bg-secondary-subtle rounded-3">
+            <p class="mb-0 text-center small">
+              <strong class="me-2">TL;DR</strong>
+              1兆トークン超のコーパスに対しても0.1秒単位で超高速に動作し，<br class="d-none d-sm-block d-md-none">検索クエリの語順を保持し，<br class="d-none d-lg-block">さらに単語の意味的な類似性に基づく<br class="d-none d-sm-block d-md-none">置換・挿入・削除に対応した検索システム
+            </p>
+          </div>
+
+
+          <!-- Image -->
+          <img src="/static/images/v2.png" class="img-fluid d-block mx-auto mt-2" alt="SoftMatcha 2 overview">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="my-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h5 class="text-center mb-2">Abstract</h5>
+          <p>
+            <!-- \begin{abstract}
+            % 8--13行に収めたい from CfP
+            超大規模コーパスを，超高速に，かつ意味や表記の揺れに柔らかく対応できる検索システムSoftMatcha 2を提案・提供する．
+            提案法は，言語モデルの学習コーパスの検索を目指す既存法の持つ特徴群，つまり，クエリの語順の保持，意味的類似性に基づいた置換，1兆語規模コーパスに対する0.1秒単位の即時検索のすべてを満たし，さらにクエリへの単語の挿入や削除も考慮できる．
+            特に，クエリに「似た」パターンの種類数の組合せ爆発という困難を，
+            %単語パターンの段階的な列挙と，
+            逐次的検索による枝刈りをおこなう新しいアルゴリズムで解決する．
+            1.4兆語のコーパスFineWeb-Edu~\cite{Lozhkov-2024-fineweb-eduFinestCollectionEducationalContent-ef}を用いた実験では，完全一致の場合も柔らかい検索の場合も，既存手法群（infini-gram~\cite{Liu-2024-infini-gramScalingUnboundedN-gramLanguageModelsTrillionTokens-vk}, SoftMatcha~\cite{Deguchi-2025-softmatchaSoftPatternMatcherBillion-scaleCorpusSearches-on}）と比べた大幅な高速化を確認した．
+            % 1.4兆語
+            % 類似パターンとその用例を中央値 0.05 秒未満で列挙
+            さらに
+            % コーパス言語学や言語モデルの解釈性の研究への活用のため，
+            FineWeb-Edu\cite{Lozhkov-2024-fineweb-eduFinestCollectionEducationalContent-ef}\footnote{ODC-By v1.0 License (\url{https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu})．}およびLLM-jp-corpus-v3\cite{Other-2024-llm-jpCorpusV3-uq}\footnote{コーパスの再配布は行わず，検索システムはAWS Tokyo Regionで実行した (\url{https://gitlab.llm-jp.nii.ac.jp/datasets/llm-jp-corpus-v3})．}をウェブブラウザ上で高速検索できるオンラインツールを提供する．
+            \footnote{\label{footnote:demo}ウェブツール: \url{https://softmatcha.github.io/v2/}．}
+            % fineweb 1,517億語
+            % LLM-jp-corpus-v3 1,100億語
+            \end{abstract} -->
+            超大規模コーパスを，超高速に，かつ意味や表記の揺れに柔らかく対応できる検索システムSoftMatcha 2を提案・提供する．
+            提案法は，言語モデルの学習コーパスの検索を目指す既存法の持つ特徴群，つまり，クエリの語順の保持，意味的類似性に基づいた置換，1兆語規模コーパスに対する0.1秒単位の即時検索のすべてを満たし，さらにクエリへの単語の挿入や削除も考慮できる．
+            特に，クエリに「似た」パターンの種類数の組合せ爆発という困難を，
+            逐次的検索による枝刈りをおこなう新しいアルゴリズムで解決する．
+            1.4兆語のコーパスFineWeb-Eduを用いた実験では，完全一致の場合も柔らかい検索の場合も，既存手法群（infini-gram, SoftMatcha）と比べた大幅な高速化を確認した．
+            さらにFineWeb-EduおよびLLM-jp-corpus-v3をウェブブラウザ上で高速検索できるオンラインツールを提供する．
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section class="py-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h5 class="text-center mb-3">BibTeX</h5>
+          <pre class="bg-white p-3 border rounded">coming soon.</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 border-top">
+    <div class="container text-center text-muted small">
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
