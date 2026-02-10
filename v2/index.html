@@ -150,15 +150,14 @@
         <div class="col-lg-9">
           <h5 class="text-center mb-2">Abstract</h5>
           <p>
-            We present SoftMatcha 2, a soft (i.e., robust to spelling and semantic variations) and fast pattern matcher
-            for trillion-scale corpora. Our method incorporates all key capabilities of existing methods for searching
-            corpora used to train language models: (1) preserving the word order of the query, (2) substitution based on
-            semantic similarity, and (3) instantaneous search (within 100 milliseconds) on trillion-scale corpora. Our
-            method also handles word insertions and deletions in queries. Our algorithm is based on (i) fast exact
-            matching using a suffix array, and (ii) efficient pruning that addresses the combinatorial explosion of
-            query-similar patterns. In experiments on FineWeb-Edu (1.4T tokens), our method achieves search latencies of
-            44 ms for soft matching and 0.2 ms for exact matching, significantly outperforming existing methods such as
-            infini-gram, infini-gram mini, and SoftMatcha.
+            We present an ultra-fast and flexible search algorithm that enables search over trillion-scale natural language corpora in under 0.3 seconds while handling semantic variations (substitution, insertion, and deletion).
+            Our approach employs string matching based on suffix arrays that scales well with corpus size.
+            To mitigate the combinatorial explosion induced by the semantic relaxation of queries, our method is built on two key algorithmic ideas: fast exact lookup enabled by a disk-aware design, and dynamic corpus-aware pruning.
+            We theoretically show that the proposed method suppresses exponential growth in the search space with respect to query length by leveraging statistical properties of natural language. 
+            In experiments on FineWeb-Edu (1.4T tokens),
+            we show that our method achieves significantly lower search latency than existing methods: infini-gram, infini-gram mini, and SoftMatcha.
+            As a practical application, we demonstrate that our method identifies benchmark contamination in training corpora, unidentified by existing approaches.
+            We also provide an online demo of fast, soft search across corpora in seven languages.
           </p>
         </div>
       </div>
